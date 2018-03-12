@@ -2,4 +2,4 @@ Schedule and deliverable:
 
   Create trail script for player 2 (est. 4 hours)
   Create a simple timer and text dialogue (est. 2 hours)
-  Create level plane for players to move across.
+  Create level plane for players to move across. (est 1 hour)
