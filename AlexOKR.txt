@@ -1,0 +1,5 @@
+Schedule and deliverable:
+
+Create a bowl shaped platform that one player will have to jump on without breaking their trail (est. 1-2 hours)
+Create an invisible object that will only appear after the first player jumps on it that will allow player 2 to progress (est. 2 hours)
+Improve player control to go from tank controls to natural controls(est. 1 hour)
