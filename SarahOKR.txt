@@ -1,1 +1,5 @@
 Schedule And Deliverable:
+
+Create two players -- -3/12/2018 (estimate: 1 hour)
+Code script to move individual players -- 03/14/2018 (estimate: 2 hours)
+Help set up level design and scenery -- 03/21/2018 (Estimate: 6-8 hours)
