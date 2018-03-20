@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 
-public class skeletonControls : NetworkBehaviour {
+public class skeletonControls : MonoBehaviour {
 
     Rigidbody rb;
     Transform t;
@@ -21,7 +21,7 @@ public class skeletonControls : NetworkBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        if (Vector3.Distance(player.position, this.transform.position) < 10)
+        if (Vector3.Distance(player.position, this.transform.position) < 20)
         {
             Vector3 direction = player.position - this.transform.position;
             direction.y = 0;
