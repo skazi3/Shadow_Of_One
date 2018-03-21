@@ -4,20 +4,26 @@ using UnityEngine;
 
 public class SpikeController : MonoBehaviour {
 	public GameObject player;
-	private bool playerIsNear;
+	private bool isPlayerNear;
 	private bool moveUp;
 	// Use this for initialization
 	void Start () {
-		playerIsNear = false;
+		isPlayerNear = false;
 		moveUp = false;
 	}
 	void moveSpikesUp(){
+		if (!isPlayerNear) {
+			transform.Translate (new Vector3 (0, 7, 0));
+		}
+		isPlayerNear = true;
 	}		
 	// Update is called once per frame
 	void Update () {
-		if (transform.position.y <= -14)
+		if (player.transform.position.z >= 800)
+			moveSpikesUp ();
+		if (transform.position.y <= -10.4)
 			moveUp = true;
-		else if(transform.position.y >= 12)
+		else if(transform.position.y >= 6)
 			moveUp = false;
 			
 		if (moveUp) {
