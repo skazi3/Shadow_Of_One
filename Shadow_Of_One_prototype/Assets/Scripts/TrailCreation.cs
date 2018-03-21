@@ -4,11 +4,18 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(MeshFilter))]
-public class TrailCreation : MonoBehaviour {
+public class TrailCreation : MonoBehaviour
+{
 
 
     Mesh mesh;
     Vector3[] vertices;
+
+    public Vector3 bLeft;
+    public Vector3 tLeft;
+    public Vector3 bRight;
+    public Vector3 tRight;
+
     int[] triangles;
 
     private void Awake()
@@ -16,14 +23,15 @@ public class TrailCreation : MonoBehaviour {
         mesh = GetComponent<MeshFilter>().mesh;
     }
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         MakeMeshData();
         CreateMesh();
 
-	}
+    }
     private void Update()
     {
-        
+
     }
 
 
@@ -44,6 +52,6 @@ public class TrailCreation : MonoBehaviour {
         mesh.triangles = triangles;
 
     }
-	
+
 
 }
