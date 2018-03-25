@@ -25,6 +25,9 @@ public class TrailCreation : MonoBehaviour
     
     private int i = 0;
 
+
+    public int updateLength;
+
     private void Awake()
     {
         trailWidth = 1;
