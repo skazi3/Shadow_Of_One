@@ -23,18 +23,24 @@ public class SpikeController : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
-		if (player.transform.position.z >= 800)
-			moveSpikesUp ();
-		if (transform.position.y <= -10.4)
-			moveUp = true;
-		else if(transform.position.y >= 6)
-			moveUp = false;
-			
-		if (moveUp) {
-			transform.Translate (new Vector3 (0, 1, 0));
-		} else if (!moveUp) {
-			transform.Translate (new Vector3 (0, -1, 0));
-		}
+        if (player.transform.position.z >= 800)
+            Activate();
 
 	}
+
+    void Activate()
+    {
+        if (transform.position.y <= -10.4)
+            moveUp = true;
+        else if (transform.position.y >= 6)
+            moveUp = false;
+        if (moveUp)
+        {
+            transform.Translate(new Vector3(0, 1, 0)*Time.deltaTime);
+        }
+        else if (!moveUp)
+        {
+            transform.Translate(new Vector3(0, -1, 0) * Time.deltaTime);
+        }
+    }
 }

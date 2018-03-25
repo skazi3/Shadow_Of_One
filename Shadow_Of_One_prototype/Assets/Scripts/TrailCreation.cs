@@ -9,30 +9,35 @@ public class TrailCreation : MonoBehaviour
     Mesh mesh;
     Vector3[] vertices;
     List<Vector3> verticeList;
+    int[] triangles;
     List<int> triangleList;
+
+    public int trailWidth;
+    
     public GameObject player;
+    
 
     public Vector3 bLeft;
     public Vector3 tLeft;
     public Vector3 bRight;
     public Vector3 tRight;
     public Vector3 playerPos;
-    int[] triangles;
+    
     private int i = 0;
 
     private void Awake()
     {
-
+        trailWidth = 1;
         mesh = GetComponent<MeshFilter>().mesh;
         
         //mesh.gameObject.AddComponent<MeshCollider>();
         playerPos = player.GetComponent<Transform>().position;
         verticeList = new List<Vector3>();
         triangleList = new List<int>();
-        bLeft = new Vector3(playerPos.x-1, playerPos.y-.5f, playerPos.z-1);
-        tLeft = new Vector3(playerPos.x - 1, playerPos.y-.5f, playerPos.z);
-        bRight = new Vector3(playerPos.x + 1, playerPos.y-.5f, playerPos.z - 1);
-        tRight = new Vector3(playerPos.x + 1, playerPos.y-.5f, playerPos.z);
+        bLeft = new Vector3(playerPos.x- trailWidth, playerPos.y-.5f, playerPos.z-1);
+        tLeft = new Vector3(playerPos.x - trailWidth, playerPos.y-.5f, playerPos.z-.5f);
+        bRight = new Vector3(playerPos.x + trailWidth, playerPos.y-.5f, playerPos.z - 1);
+        tRight = new Vector3(playerPos.x + trailWidth, playerPos.y-.5f, playerPos.z-.5f);
 
         MakeMeshData();
         CreateMesh();
@@ -82,12 +87,13 @@ public class TrailCreation : MonoBehaviour
     {
         bLeft = tLeft;
         bRight = tRight;
-        tLeft = new Vector3(playerPos.x - 1, playerPos.y-.5f, playerPos.z);
-        tRight = new Vector3(playerPos.x + 1, playerPos.y - .5f, playerPos.z);
+        tLeft = new Vector3(playerPos.x - trailWidth, playerPos.y-.5f, playerPos.z-.5f);
+        tRight = new Vector3(playerPos.x + trailWidth, playerPos.y - .5f, playerPos.z-.5f);
         Vector3 newBLeft = new Vector3(bLeft.x, bLeft.y, bLeft.z);
         Vector3 newBRight = new Vector3(bRight.x, bRight.y, bRight.z);
         Vector3 newTRight = new Vector3(tRight.x, tRight.y, tRight.z);
         Vector3 newTLeft = new Vector3(tLeft.x, tLeft.y, tLeft.z);
+
         verticeList.Add(newBLeft);
         verticeList.Add(newTLeft);
         verticeList.Add(newBRight);
