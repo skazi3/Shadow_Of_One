@@ -13,8 +13,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        print(Input.GetAxis("Horizontal"));
-        transform.Translate(moveSpeed*Input.GetAxis("Horizontal") * Time.deltaTime, 0f, moveSpeed*Input.GetAxis("Vertical") * Time.deltaTime);
+        
+        //print(Input.GetAxis("Horizontal"));
+        transform.Translate(moveSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, moveSpeed * Input.GetAxis("Vertical") * Time.deltaTime);
         
     }
 }

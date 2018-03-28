@@ -36,11 +36,11 @@ public class SpikeController : MonoBehaviour {
             moveUp = false;
         if (moveUp)
         {
-            transform.Translate(new Vector3(0, 1, 0)*Time.deltaTime);
+            transform.Translate(new Vector3(0, 1, 0));
         }
         else if (!moveUp)
         {
-            transform.Translate(new Vector3(0, -1, 0) * Time.deltaTime);
+            transform.Translate(new Vector3(0, -1, 0));
         }
     }
 }
