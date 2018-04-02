@@ -5,7 +5,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter))]
 public class TrailCreation : MonoBehaviour
-{ 
+{
     Mesh mesh;
     Vector3[] vertices;
     List<Vector3> verticeList;
@@ -13,16 +13,16 @@ public class TrailCreation : MonoBehaviour
     List<int> triangleList;
 
     public int trailWidth;
-    
+
     public GameObject player;
-    
+
 
     public Vector3 bLeft;
     public Vector3 tLeft;
     public Vector3 bRight;
     public Vector3 tRight;
     public Vector3 playerPos;
-    
+
     private int i = 0;
 
 
@@ -32,15 +32,15 @@ public class TrailCreation : MonoBehaviour
     {
         trailWidth = 1;
         mesh = GetComponent<MeshFilter>().mesh;
-        
+
         //mesh.gameObject.AddComponent<MeshCollider>();
         playerPos = player.GetComponent<Transform>().position;
         verticeList = new List<Vector3>();
         triangleList = new List<int>();
-        bLeft = new Vector3(playerPos.x- trailWidth, playerPos.y-.5f, playerPos.z-1);
-        tLeft = new Vector3(playerPos.x - trailWidth, playerPos.y-.5f, playerPos.z-.5f);
-        bRight = new Vector3(playerPos.x + trailWidth, playerPos.y-.5f, playerPos.z - 1);
-        tRight = new Vector3(playerPos.x + trailWidth, playerPos.y-.5f, playerPos.z-.5f);
+        bLeft = new Vector3(playerPos.x - trailWidth, playerPos.y - .5f, playerPos.z - 1);
+        tLeft = new Vector3(playerPos.x - trailWidth, playerPos.y - .5f, playerPos.z - .5f);
+        bRight = new Vector3(playerPos.x + trailWidth, playerPos.y - .5f, playerPos.z - 1);
+        tRight = new Vector3(playerPos.x + trailWidth, playerPos.y - .5f, playerPos.z - .5f);
 
         MakeMeshData();
         CreateMesh();
@@ -56,7 +56,7 @@ public class TrailCreation : MonoBehaviour
 
 
     }
-    
+
 
 
     void MakeMeshData()
@@ -82,16 +82,26 @@ public class TrailCreation : MonoBehaviour
     void CreateMesh()
     {
         mesh.Clear();
+        //DeleteVertices();
         mesh.vertices = vertices;
         mesh.triangles = triangles;
     }
-
+    void DeleteVertices()
+    {
+        if (i > 100)
+        {
+            for (int y = i; y!= y-i; y--)
+            {
+                vertices[y] = new Vector3(0, 0, 0);
+            }
+        }
+    }
     void UpdateVertices()
     {
         bLeft = tLeft;
         bRight = tRight;
-        tLeft = new Vector3(playerPos.x - trailWidth, playerPos.y-.5f, playerPos.z-.5f);
-        tRight = new Vector3(playerPos.x + trailWidth, playerPos.y - .5f, playerPos.z-.5f);
+        tLeft = new Vector3(playerPos.x - trailWidth, playerPos.y - .5f, playerPos.z - .5f);
+        tRight = new Vector3(playerPos.x + trailWidth, playerPos.y - .5f, playerPos.z - .5f);
         Vector3 newBLeft = new Vector3(bLeft.x, bLeft.y, bLeft.z);
         Vector3 newBRight = new Vector3(bRight.x, bRight.y, bRight.z);
         Vector3 newTRight = new Vector3(tRight.x, tRight.y, tRight.z);
@@ -104,11 +114,11 @@ public class TrailCreation : MonoBehaviour
         vertices = verticeList.ToArray();
         i += 4;
         triangleList.Add(i);
-        triangleList.Add(i+1);
-        triangleList.Add(i+2);
-        triangleList.Add(i+2);
-        triangleList.Add(i+1);
-        triangleList.Add(i+3);
+        triangleList.Add(i + 1);
+        triangleList.Add(i + 2);
+        triangleList.Add(i + 2);
+        triangleList.Add(i + 1);
+        triangleList.Add(i + 3);
         triangles = triangleList.ToArray();
     }
 

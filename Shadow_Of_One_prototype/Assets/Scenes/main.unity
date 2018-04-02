@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44824868, g: 0.49827576, b: 0.575583, a: 1}
+  m_IndirectSpecularColor: {r: 0.4482482, g: 0.49827528, b: 0.5755824, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -875,7 +875,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 387301864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 725}
+  m_LocalPosition: {x: 0, y: 0.5, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2743,7 +2743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900540c3c51f5bc45ab53160de6baf2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trailWidth: 0
+  trailWidth: 15
   player: {fileID: 387301864}
   bLeft: {x: 0, y: 0, z: 0}
   tLeft: {x: 0, y: 0, z: 0}
@@ -4354,7 +4354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c9e9999729eb664c9f31671ef01249a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 387301865}
+  target: {fileID: 1889516368}
   smoothSpeed: 5
   offset: {x: 0, y: 2, z: -10}
 --- !u!81 &1815251435
@@ -4363,7 +4363,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1815251433}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &1815251436
 Behaviour:
   m_ObjectHideFlags: 0
@@ -4505,6 +4505,7 @@ GameObject:
   - component: {fileID: 1889516367}
   - component: {fileID: 1889516366}
   - component: {fileID: 1889516365}
+  - component: {fileID: 1889516370}
   - component: {fileID: 1889516369}
   m_Layer: 0
   m_Name: Player1
@@ -4592,8 +4593,20 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1889516370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1889516364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b27ad3a7b322c46ac8442e5be17438, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5.97
 --- !u!1 &1891911226
 GameObject:
   m_ObjectHideFlags: 0
