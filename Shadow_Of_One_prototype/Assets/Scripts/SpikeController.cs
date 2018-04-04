@@ -18,7 +18,7 @@ public class SpikeController : MonoBehaviour {
 		isPlayerNear = true;
 	}
 	void OnCollisionEnter(Collision collision){
-		Destroy (collision.gameObject);
+		Destroy (player);
 
 	}
 	// Update is called once per frame
