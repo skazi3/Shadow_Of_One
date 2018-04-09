@@ -10,7 +10,8 @@ public class walkingController : MonoBehaviour {
 
 	}
 	void Update(){
-		if (Input.GetKey (KeyCode.W)) {
+        transform.Translate(5 * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, 5 * Input.GetAxis("Vertical") * Time.deltaTime);
+        if (Input.GetKey (KeyCode.W)) {
 			animator.SetBool ("keyPressed", true);
 		} else
 			animator.SetBool ("keyPressed", false);
