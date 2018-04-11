@@ -10,7 +10,7 @@ public class CameraFacing : MonoBehaviour
 		transform.LookAt(transform.position + cam1.transform.rotation * Vector3.forward,
 			cam1.transform.rotation * Vector3.up);
 		
-		transform.LookAt(transform.position + cam2.transform.rotation * Vector3.forward,
-			cam2.transform.rotation * Vector3.up);
+		//transform.LookAt(transform.position + cam2.transform.rotation * Vector3.forward,
+			//cam2.transform.rotation * Vector3.up);
 	}
 }

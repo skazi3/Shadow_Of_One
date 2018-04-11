@@ -37,10 +37,10 @@ public class TrailCreation : MonoBehaviour
         playerPos = player.GetComponent<Transform>().position;
         verticeList = new List<Vector3>();
         triangleList = new List<int>();
-        bLeft = new Vector3(playerPos.x - trailWidth, playerPos.y - .5f, playerPos.z - 1);
-        tLeft = new Vector3(playerPos.x - trailWidth, playerPos.y - .5f, playerPos.z - .5f);
-        bRight = new Vector3(playerPos.x + trailWidth, playerPos.y - .5f, playerPos.z - 1);
-        tRight = new Vector3(playerPos.x + trailWidth, playerPos.y - .5f, playerPos.z - .5f);
+        bLeft = new Vector3(playerPos.x - trailWidth, playerPos.y - .4f, playerPos.z - 1);
+        tLeft = new Vector3(playerPos.x - trailWidth, playerPos.y - .4f, playerPos.z - .5f);
+        bRight = new Vector3(playerPos.x + trailWidth, playerPos.y - .4f, playerPos.z - 1);
+        tRight = new Vector3(playerPos.x + trailWidth, playerPos.y - .4f, playerPos.z - .5f);
 
         MakeMeshData();
         CreateMesh();
@@ -90,7 +90,7 @@ public class TrailCreation : MonoBehaviour
     {
         if (i > 100)
         {
-            for (int y = i; y!= y-i; y--)
+            for (int y = i; y != y - i; y--)
             {
                 vertices[y] = new Vector3(0, 0, 0);
             }
@@ -100,8 +100,8 @@ public class TrailCreation : MonoBehaviour
     {
         bLeft = tLeft;
         bRight = tRight;
-        tLeft = new Vector3(playerPos.x - trailWidth, playerPos.y - .5f, playerPos.z - .5f);
-        tRight = new Vector3(playerPos.x + trailWidth, playerPos.y - .5f, playerPos.z - .5f);
+        tLeft = new Vector3(playerPos.x - trailWidth, playerPos.y - .4f, playerPos.z - .5f);
+        tRight = new Vector3(playerPos.x + trailWidth, playerPos.y - .4f, playerPos.z - .5f);
         Vector3 newBLeft = new Vector3(bLeft.x, bLeft.y, bLeft.z);
         Vector3 newBRight = new Vector3(bRight.x, bRight.y, bRight.z);
         Vector3 newTRight = new Vector3(tRight.x, tRight.y, tRight.z);
