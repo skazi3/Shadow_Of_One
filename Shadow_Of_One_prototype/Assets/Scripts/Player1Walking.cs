@@ -9,9 +9,9 @@ public class Player1Walking : MonoBehaviour {
 		animator2 = GetComponent<Animator> ();
 	}
 	void Update(){
-		
+		transform.Translate(5 * Input.GetAxis("Horizontal1") * Time.deltaTime, 0f, 5 * Input.GetAxis("Vertical1") * Time.deltaTime);
 		if (Input.GetKey (KeyCode.UpArrow)) {
-			transform.Translate(5 * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, 5 * Input.GetAxis("Vertical") * Time.deltaTime);
+			
 			animator2.SetBool ("upArrowPressed", true);
 		} else
 			animator2.SetBool ("upArrowPressed", false);

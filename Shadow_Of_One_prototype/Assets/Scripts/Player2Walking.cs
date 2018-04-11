@@ -15,10 +15,11 @@ public class Player2Walking : MonoBehaviour {
 			animator.SetBool ("keyPressed", true);
 		} else
 			animator.SetBool ("keyPressed", false);
-		if (Input.GetKey (KeyCode.Space)) {
+		if (Input.GetKeyDown (KeyCode.Space)) {
 			animator.SetBool ("jumpPressed", true);
 
-		} else
+		} 
+		else if(Input.GetKeyUp(KeyCode.Space))
 			animator.SetBool ("jumpPressed", false);
 	}
 }
