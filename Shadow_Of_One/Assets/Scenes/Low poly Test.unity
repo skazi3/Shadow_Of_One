@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.16
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.14450249, g: 0.14805365, b: 0.13779572, a: 0.16}
+  m_IndirectSpecularColor: {r: 0.1790835, g: 0.20235375, b: 0.2386851, a: 0.16}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2932,6 +2932,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8610e06c8b63d46ae92d54fdc88f45f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  rotationSpeed: 100
 --- !u!4 &1366254968 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400064, guid: fe1f7784537094e00bcb351390770edd, type: 3}
@@ -3058,6 +3060,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8610e06c8b63d46ae92d54fdc88f45f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  rotationSpeed: 100
 --- !u!95 &1423994160
 Animator:
   serializedVersion: 3
@@ -3462,15 +3466,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 462124, guid: cc5de5e674870ca479a40105f80555ad, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 15.548847
+      value: 15.6
       objectReference: {fileID: 0}
     - target: {fileID: 462124, guid: cc5de5e674870ca479a40105f80555ad, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -37.84561
+      value: -37.83
       objectReference: {fileID: 0}
     - target: {fileID: 462124, guid: cc5de5e674870ca479a40105f80555ad, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -2.2206364
+      value: -2.3
       objectReference: {fileID: 0}
     - target: {fileID: 462124, guid: cc5de5e674870ca479a40105f80555ad, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3515,6 +3519,33 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 462124, guid: cc5de5e674870ca479a40105f80555ad, type: 2}
   m_PrefabInternal: {fileID: 1531046645}
+--- !u!1 &1531046647 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 170560, guid: cc5de5e674870ca479a40105f80555ad, type: 2}
+  m_PrefabInternal: {fileID: 1531046645}
+--- !u!114 &1531046648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1531046647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35dcab09f3cf7407aa358d5ba468c63c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1531046649
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1531046647}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.6089625, y: 7.1520333, z: 2.4663417}
+  m_Center: {x: 0.5393458, y: 3.0760171, z: -0.8489309}
 --- !u!1 &1545660535
 GameObject:
   m_ObjectHideFlags: 0
@@ -3967,7 +3998,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &1705721127
 Light:
   m_ObjectHideFlags: 0
@@ -5097,6 +5128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8610e06c8b63d46ae92d54fdc88f45f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  rotationSpeed: 100
 --- !u!114 &2116559538
 MonoBehaviour:
   m_ObjectHideFlags: 0
