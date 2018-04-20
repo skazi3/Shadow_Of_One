@@ -6,14 +6,20 @@ using UnityEngine;
 
 public class Player2Walking : MonoBehaviour {
 	private Animator animator;
+	public float speed = 10.0F;
+	public float rotationSpeed = 100.0F;
 	// Use this for initialization
 	void Awake(){
 		animator = GetComponent<Animator> ();
 
 	}
 	void Update(){
-		transform.Translate (5 * Input.GetAxis ("Horizontal") * Time.deltaTime, 0f, 5 * Input.GetAxis ("Vertical") * Time.deltaTime);
-
+		float translation = Input.GetAxis("Vertical") * speed;
+		float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
+		translation *= Time.deltaTime;
+		rotation *= Time.deltaTime;
+		transform.Translate(0, 0, translation);
+		transform.Rotate(0, rotation, 0);
 		if (Input.GetKey (KeyCode.W)) {
 	
 			animator.SetBool ("keyPressed", true);
