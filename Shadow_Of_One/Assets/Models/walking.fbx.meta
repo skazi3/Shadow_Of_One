@@ -1,82 +1,149 @@
 fileFormatVersion: 2
-guid: af3031043f7524ee58815fb01b77c885
-timeCreated: 1522859376
+guid: b0ea76cdd89f7437785629ba3327366a
+timeCreated: 1524228319
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Body
-    100002: default1
-    100004: Eyes
-    100006: mixamorig:Head
-    100008: mixamorig:HeadTop_End
-    100010: mixamorig:Hips
-    100012: mixamorig:LeftArm
-    100014: mixamorig:LeftEye
-    100016: mixamorig:LeftFoot
-    100018: mixamorig:LeftForeArm
-    100020: mixamorig:LeftHand
-    100022: mixamorig:LeftLeg
-    100024: mixamorig:LeftShoulder
-    100026: mixamorig:LeftToe_End
-    100028: mixamorig:LeftToeBase
-    100030: mixamorig:LeftUpLeg
-    100032: mixamorig:Neck
-    100034: mixamorig:RightArm
-    100036: mixamorig:RightEye
-    100038: mixamorig:RightFoot
-    100040: mixamorig:RightForeArm
-    100042: mixamorig:RightHand
-    100044: mixamorig:RightLeg
-    100046: mixamorig:RightShoulder
-    100048: mixamorig:RightToe_End
-    100050: mixamorig:RightToeBase
-    100052: mixamorig:RightUpLeg
-    100054: mixamorig:Spine
-    100056: mixamorig:Spine1
-    100058: mixamorig:Spine2
-    100060: //RootNode
-    400000: Body
-    400002: default1
-    400004: Eyes
-    400006: mixamorig:Head
-    400008: mixamorig:HeadTop_End
-    400010: mixamorig:Hips
-    400012: mixamorig:LeftArm
-    400014: mixamorig:LeftEye
-    400016: mixamorig:LeftFoot
-    400018: mixamorig:LeftForeArm
-    400020: mixamorig:LeftHand
-    400022: mixamorig:LeftLeg
-    400024: mixamorig:LeftShoulder
-    400026: mixamorig:LeftToe_End
-    400028: mixamorig:LeftToeBase
-    400030: mixamorig:LeftUpLeg
-    400032: mixamorig:Neck
-    400034: mixamorig:RightArm
-    400036: mixamorig:RightEye
-    400038: mixamorig:RightFoot
-    400040: mixamorig:RightForeArm
-    400042: mixamorig:RightHand
-    400044: mixamorig:RightLeg
-    400046: mixamorig:RightShoulder
-    400048: mixamorig:RightToe_End
-    400050: mixamorig:RightToeBase
-    400052: mixamorig:RightUpLeg
-    400054: mixamorig:Spine
-    400056: mixamorig:Spine1
-    400058: mixamorig:Spine2
-    400060: //RootNode
-    2100000: Bodymat
-    2100002: phong1
-    4300000: default1
-    4300002: Eyes
-    4300004: Body
-    7400000: Take 001
+    100000: Head
+    100002: HeadTop_End
+    100004: Hips
+    100006: LeftArm
+    100008: LeftFoot
+    100010: LeftForeArm
+    100012: LeftHand
+    100014: LeftHandIndex1
+    100016: LeftHandIndex2
+    100018: LeftHandIndex3
+    100020: LeftHandIndex4
+    100022: LeftHandMiddle1
+    100024: LeftHandMiddle2
+    100026: LeftHandMiddle3
+    100028: LeftHandMiddle4
+    100030: LeftHandPinky1
+    100032: LeftHandPinky2
+    100034: LeftHandPinky3
+    100036: LeftHandPinky4
+    100038: LeftHandRing1
+    100040: LeftHandRing2
+    100042: LeftHandRing3
+    100044: LeftHandRing4
+    100046: LeftHandThumb1
+    100048: LeftHandThumb2
+    100050: LeftHandThumb3
+    100052: LeftHandThumb4
+    100054: LeftLeg
+    100056: LeftShoulder
+    100058: LeftToe_End
+    100060: LeftToeBase
+    100062: LeftUpLeg
+    100064: Neck
+    100066: Nightshade
+    100068: RightArm
+    100070: RightFoot
+    100072: RightForeArm
+    100074: RightHand
+    100076: RightHandIndex1
+    100078: RightHandIndex2
+    100080: RightHandIndex3
+    100082: RightHandIndex4
+    100084: RightHandMiddle1
+    100086: RightHandMiddle2
+    100088: RightHandMiddle3
+    100090: RightHandMiddle4
+    100092: RightHandPinky1
+    100094: RightHandPinky2
+    100096: RightHandPinky3
+    100098: RightHandPinky4
+    100100: RightHandRing1
+    100102: RightHandRing2
+    100104: RightHandRing3
+    100106: RightHandRing4
+    100108: RightHandThumb1
+    100110: RightHandThumb2
+    100112: RightHandThumb3
+    100114: RightHandThumb4
+    100116: RightLeg
+    100118: RightShoulder
+    100120: RightToe_End
+    100122: RightToeBase
+    100124: RightUpLeg
+    100126: Spine
+    100128: Spine1
+    100130: Spine2
+    100132: //RootNode
+    400000: Head
+    400002: HeadTop_End
+    400004: Hips
+    400006: LeftArm
+    400008: LeftFoot
+    400010: LeftForeArm
+    400012: LeftHand
+    400014: LeftHandIndex1
+    400016: LeftHandIndex2
+    400018: LeftHandIndex3
+    400020: LeftHandIndex4
+    400022: LeftHandMiddle1
+    400024: LeftHandMiddle2
+    400026: LeftHandMiddle3
+    400028: LeftHandMiddle4
+    400030: LeftHandPinky1
+    400032: LeftHandPinky2
+    400034: LeftHandPinky3
+    400036: LeftHandPinky4
+    400038: LeftHandRing1
+    400040: LeftHandRing2
+    400042: LeftHandRing3
+    400044: LeftHandRing4
+    400046: LeftHandThumb1
+    400048: LeftHandThumb2
+    400050: LeftHandThumb3
+    400052: LeftHandThumb4
+    400054: LeftLeg
+    400056: LeftShoulder
+    400058: LeftToe_End
+    400060: LeftToeBase
+    400062: LeftUpLeg
+    400064: Neck
+    400066: Nightshade
+    400068: RightArm
+    400070: RightFoot
+    400072: RightForeArm
+    400074: RightHand
+    400076: RightHandIndex1
+    400078: RightHandIndex2
+    400080: RightHandIndex3
+    400082: RightHandIndex4
+    400084: RightHandMiddle1
+    400086: RightHandMiddle2
+    400088: RightHandMiddle3
+    400090: RightHandMiddle4
+    400092: RightHandPinky1
+    400094: RightHandPinky2
+    400096: RightHandPinky3
+    400098: RightHandPinky4
+    400100: RightHandRing1
+    400102: RightHandRing2
+    400104: RightHandRing3
+    400106: RightHandRing4
+    400108: RightHandThumb1
+    400110: RightHandThumb2
+    400112: RightHandThumb3
+    400114: RightHandThumb4
+    400116: RightLeg
+    400118: RightShoulder
+    400120: RightToe_End
+    400122: RightToeBase
+    400124: RightUpLeg
+    400126: Spine
+    400128: Spine1
+    400130: Spine2
+    400132: //RootNode
+    2100000: Nightshade_MAT
+    4300000: Nightshade
+    7400000: mixamo.com
     9500000: //RootNode
-    13700000: Body
-    13700002: default1
-    13700004: Eyes
+    13700000: Nightshade
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -103,7 +170,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: mixamo.com
+      takeName: mixamo.com
+      firstFrame: 0
+      lastFrame: 26
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -145,7 +240,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    rootMotionBoneName: 
+    rootMotionBoneName: Nightshade
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0

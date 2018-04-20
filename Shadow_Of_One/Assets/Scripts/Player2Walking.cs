@@ -12,16 +12,21 @@ public class Player2Walking : MonoBehaviour {
 
 	}
 	void Update(){
-		transform.Translate(5 * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, 5 * Input.GetAxis("Vertical") * Time.deltaTime);
+		transform.Translate (5 * Input.GetAxis ("Horizontal") * Time.deltaTime, 0f, 5 * Input.GetAxis ("Vertical") * Time.deltaTime);
 
 		if (Input.GetKey (KeyCode.W)) {
+	
 			animator.SetBool ("keyPressed", true);
 		} else if (Input.GetKeyUp (KeyCode.W)) {
 			animator.SetBool ("keyPressed", false);
 		}
 		if (Input.GetKey (KeyCode.Space)) {
-			animator.SetBool ("spacePressed", true);
-		} else
-			animator.SetBool ("spacePressed", false);
+			Debug.Log ("truueeee");
+			animator.SetBool ("jumpPressed", true);
+		} else if(Input.GetKeyUp(KeyCode.Space))
+		{
+			animator.SetBool ("jumpPressed", false);
+			Debug.Log ("falseee");
+		}
 	}
 }
